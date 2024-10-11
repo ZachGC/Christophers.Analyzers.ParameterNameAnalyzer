@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = ParameterNameAnalyzer.Package
+build_property.ProjectDir = C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
