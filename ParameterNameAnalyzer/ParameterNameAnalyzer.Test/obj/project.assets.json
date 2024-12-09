@@ -2569,13 +2569,9 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Christophers.Analyzers.ParameterNameAnalyzer/1.0.4": {
+      "Christophers.Analyzers.ParameterNameAnalyzer/1.1.344.1009": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Microsoft.CodeAnalysis.Analyzers": "2.9.8",
-          "Microsoft.CodeAnalysis.CSharp": "3.3.1"
-        },
+        "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
           "bin/placeholder/Christophers.Analyzers.ParameterNameAnalyzer.dll": {}
         },
@@ -2585,9 +2581,9 @@
       },
       "ParameterNameAnalyzer.CodeFixes/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Christophers.Analyzers.ParameterNameAnalyzer": "1.0.4",
+          "Christophers.Analyzers.ParameterNameAnalyzer": "1.1.344.1009",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.3.1"
         },
         "compile": {
@@ -7941,7 +7937,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Christophers.Analyzers.ParameterNameAnalyzer/1.0.4": {
+    "Christophers.Analyzers.ParameterNameAnalyzer/1.1.344.1009": {
       "type": "project",
       "path": "../ParameterNameAnalyzer/ParameterNameAnalyzer.csproj",
       "msbuildProject": "../ParameterNameAnalyzer/ParameterNameAnalyzer.csproj"
@@ -7954,7 +7950,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Christophers.Analyzers.ParameterNameAnalyzer >= 1.0.4",
+      "Christophers.Analyzers.ParameterNameAnalyzer >= 1.1.344.1009",
       "MSTest.TestAdapter >= 3.6.1",
       "MSTest.TestFramework >= 3.6.1",
       "Microsoft.CodeAnalysis >= 4.11.0",
@@ -8023,7 +8019,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -8104,7 +8101,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

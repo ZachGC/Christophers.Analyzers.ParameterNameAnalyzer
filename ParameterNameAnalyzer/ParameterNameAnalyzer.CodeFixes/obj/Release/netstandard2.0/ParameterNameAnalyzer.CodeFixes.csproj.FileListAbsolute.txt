@@ -13,3 +13,4 @@ C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\Pa
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\netstandard2.0\Paramete.3B2123DF.Up2Date
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\netstandard2.0\ParameterNameAnalyzer.CodeFixes.dll
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\netstandard2.0\ParameterNameAnalyzer.CodeFixes.pdb
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\netstandard2.0\ParameterNameAnalyzer.CodeFixes.sourcelink.json

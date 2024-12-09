@@ -16,7 +16,7 @@ namespace ParameterNameAnalyzer
     {
         private const string Title = "Add parameter name";
 
-        public sealed override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(ParameterNameAnalyzer_Analyzer.DiagnosticId);
+        public sealed override ImmutableArray<string> FixableDiagnosticIds => [ParameterNameAnalyzer_Analyzer.DiagnosticId];
 
         public sealed override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
 
@@ -37,25 +37,62 @@ namespace ParameterNameAnalyzer
                     equivalenceKey: Title),
                 diagnostic);
         }
-
         private async Task<Document> AddParameterNameAsync(Document document, ArgumentSyntax argument, CancellationToken cancellationToken)
         {
-            var root = await document.GetSyntaxRootAsync(cancellationToken);
-            var semanticModel = await document.GetSemanticModelAsync(cancellationToken);
+            var root = await document.GetSyntaxRootAsync(cancellationToken).ConfigureAwait(false);
+            var semanticModel = await document.GetSemanticModelAsync(cancellationToken).ConfigureAwait(false);
 
+            // Try to get the invocation or object creation that this argument is part of
             var invocationExpression = argument.FirstAncestorOrSelf<InvocationExpressionSyntax>();
-            var methodSymbol = semanticModel.GetSymbolInfo(invocationExpression).Symbol as IMethodSymbol;
+            var objectCreationExpression = argument.FirstAncestorOrSelf<ObjectCreationExpressionSyntax>();
 
-            if (methodSymbol != null)
+            IMethodSymbol methodSymbol = null;
+            SeparatedSyntaxList<ArgumentSyntax> arguments = default;
+
+            if (invocationExpression is not null)
             {
-                var parameterName = methodSymbol.Parameters[invocationExpression.ArgumentList.Arguments.IndexOf(argument)].Name;
-                var newArgument = argument.WithNameColon(SyntaxFactory.NameColon(SyntaxFactory.IdentifierName(parameterName)));
-                var newRoot = root.ReplaceNode(argument, newArgument);
+                // Method invocation scenario
+                var symbolInfo = semanticModel.GetSymbolInfo(invocationExpression, cancellationToken);
+                methodSymbol = symbolInfo.Symbol as IMethodSymbol;
 
-                return document.WithSyntaxRoot(newRoot);
+                if (invocationExpression.ArgumentList != null)
+                {
+                    arguments = invocationExpression.ArgumentList.Arguments;
+                }
+            }
+            else if (objectCreationExpression is not null)
+            {
+                // Constructor invocation scenario
+                var symbolInfo = semanticModel.GetSymbolInfo(objectCreationExpression, cancellationToken);
+                methodSymbol = symbolInfo.Symbol as IMethodSymbol;
+
+                if (objectCreationExpression.ArgumentList != null)
+                {
+                    arguments = objectCreationExpression.ArgumentList.Arguments;
+                }
             }
 
-            return document;
+            if (methodSymbol is null || arguments.Count == 0)
+            {
+                // Could not resolve the method symbol or no arguments found; no fix
+                return document;
+            }
+
+            // Find the parameter name by matching the argument's index
+            var argumentIndex = arguments.IndexOf(argument);
+            if (argumentIndex < 0 || argumentIndex >= methodSymbol.Parameters.Length)
+            {
+                // For some reason, we can't map argument to a parameter
+                return document;
+            }
+
+            var parameterName = methodSymbol.Parameters[argumentIndex].Name;
+
+            // Create a new argument with the NameColon
+            var newArgument = argument.WithNameColon(SyntaxFactory.NameColon(SyntaxFactory.IdentifierName(parameterName)));
+
+            var newRoot = root.ReplaceNode(argument, newArgument);
+            return document.WithSyntaxRoot(newRoot);
         }
     }
 }

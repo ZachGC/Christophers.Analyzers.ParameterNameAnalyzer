@@ -16,7 +16,8 @@ namespace ParameterNameAnalyzer
         private const string Category = "Naming";
 
         private static DiagnosticDescriptor Rule = new DiagnosticDescriptor(
-            DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, isEnabledByDefault: true, description: Description);
+            DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning,
+            isEnabledByDefault: true, description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
@@ -24,24 +25,31 @@ namespace ParameterNameAnalyzer
         {
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
+
+            // Analyze invocation expressions (method calls)
             context.RegisterSyntaxNodeAction(AnalyzeMethodInvocation, SyntaxKind.InvocationExpression);
+            // Analyze object creation expressions (constructor calls)
             context.RegisterSyntaxNodeAction(AnalyzeConstructorInvocation, SyntaxKind.ObjectCreationExpression);
         }
 
         private static void AnalyzeMethodInvocation(SyntaxNodeAnalysisContext context)
         {
-            var invocationExpression = (InvocationExpressionSyntax)context.Node;
+            var invocationExpression = context.Node as InvocationExpressionSyntax;
+            if (invocationExpression == null)
+                return;
 
-            // Get the method being invoked
-            var methodSymbol = context.SemanticModel.GetSymbolInfo(invocationExpression).Symbol as IMethodSymbol;
+            // If the invocation doesn't have an argument list, nothing to do
+            if (invocationExpression.ArgumentList == null)
+                return;
 
-            if (methodSymbol is null) return;
+            var symbolInfo = context.SemanticModel.GetSymbolInfo(invocationExpression);
+            if (symbolInfo.Symbol is not IMethodSymbol methodSymbol)
+                return; // Symbol could not be resolved
 
-            // Check arguments in the method call
+            // Iterate over arguments and check for missing name colons
             foreach (var argument in invocationExpression.ArgumentList.Arguments)
             {
-                // Check if argument has no explicit parameter name (NameColon)
-                if (argument.NameColon is null)
+                if (argument.NameColon == null)
                 {
                     var diagnostic = Diagnostic.Create(Rule, argument.GetLocation(), argument.ToString());
                     context.ReportDiagnostic(diagnostic);
@@ -51,12 +59,19 @@ namespace ParameterNameAnalyzer
 
         private static void AnalyzeConstructorInvocation(SyntaxNodeAnalysisContext context)
         {
-            var objectCreationExpression = (ObjectCreationExpressionSyntax)context.Node;
+            var objectCreationExpression = context.Node as ObjectCreationExpressionSyntax;
+            if (objectCreationExpression == null)
+                return;
 
-            // Same logic you use for methods, but applied to constructor arguments
+            // If the object creation doesn't have an argument list (e.g. `new MyClass` with no parentheses), no arguments to check
+            if (objectCreationExpression.ArgumentList == null)
+                return;
+
+            // We could get symbol info to correlate arguments with parameters if needed, but 
+            // since the original code just ensures that arguments have names, let's skip that for now.
             foreach (var argument in objectCreationExpression.ArgumentList.Arguments)
             {
-                if (argument.NameColon is null)
+                if (argument.NameColon == null)
                 {
                     var diagnostic = Diagnostic.Create(Rule, argument.GetLocation(), argument.ToString());
                     context.ReportDiagnostic(diagnostic);

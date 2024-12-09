@@ -1,0 +1,8 @@
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\net8.0-windows10.0.26100.0\ParameterNameAnalyzer.CodeFixes.csproj.AssemblyReference.cache
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\net8.0-windows10.0.26100.0\ParameterNameAnalyzer.CodeFixResources.resources
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\net8.0-windows10.0.26100.0\ParameterNameAnalyzer.CodeFixes.csproj.GenerateResource.cache
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\net8.0-windows10.0.26100.0\ParameterNameAnalyzer.CodeFixes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\net8.0-windows10.0.26100.0\ParameterNameAnalyzer.CodeFixes.AssemblyInfoInputs.cache
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\net8.0-windows10.0.26100.0\ParameterNameAnalyzer.CodeFixes.AssemblyInfo.cs
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\net8.0-windows10.0.26100.0\ParameterNameAnalyzer.CodeFixes.csproj.CoreCompileInputs.cache
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.CodeFixes\obj\Release\net8.0-windows10.0.26100.0\ParameterNameAnalyzer.CodeFixes.sourcelink.json

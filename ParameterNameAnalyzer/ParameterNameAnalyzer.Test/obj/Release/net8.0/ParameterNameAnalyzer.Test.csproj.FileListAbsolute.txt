@@ -1,4 +1,12 @@
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\bin\Release\net8.0\.msCoverageSourceRootsMapping_ParameterNameAnalyzer.Test
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.csproj.AssemblyReference.cache
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.csproj.SuggestedBindingRedirects.cache
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.dll.config
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.AssemblyInfoInputs.cache
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.AssemblyInfo.cs
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.csproj.CoreCompileInputs.cache
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.sourcelink.json
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\bin\Release\net8.0\testhost.dll
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\bin\Release\net8.0\testhost.exe
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\bin\Release\net8.0\xunit.runner.visualstudio.testadapter.dll
@@ -320,13 +328,6 @@ C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\Pa
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\bin\Release\net8.0\ParameterNameAnalyzer.CodeFixes.pdb
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\bin\Release\net8.0\ParameterNameAnalyzer.pdb
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\bin\Release\net8.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.csproj.AssemblyReference.cache
-C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.csproj.SuggestedBindingRedirects.cache
-C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.dll.config
-C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.GeneratedMSBuildEditorConfig.editorconfig
-C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.AssemblyInfoInputs.cache
-C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.AssemblyInfo.cs
-C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.csproj.CoreCompileInputs.cache
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\Paramete.7A49B85D.Up2Date
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\ParameterNameAnalyzer.Test.dll
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Test\obj\Release\net8.0\refint\ParameterNameAnalyzer.Test.dll

@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
               "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj": {
                 "projectPath": "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj"
@@ -48,21 +48,16 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.CodeAnalysis.CSharp.Workspaces": {
               "target": "Package",
               "version": "[3.3.1, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             }
           },
           "imports": [
@@ -76,12 +71,17 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
     "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj": {
-      "version": "1.0.4",
+      "version": "1.1.344.1009",
       "restore": {
         "projectUniqueName": "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj",
         "projectName": "Christophers.Analyzers.ParameterNameAnalyzer",
@@ -98,7 +98,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -106,8 +106,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -120,25 +120,22 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.CodeAnalysis.Analyzers": {
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.9.8, )"
             },
             "Microsoft.CodeAnalysis.CSharp": {
-              "target": "Package",
-              "version": "[3.3.1, )"
-            },
-            "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[3.3.1, )"
             }
           },
           "imports": [
@@ -152,7 +149,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

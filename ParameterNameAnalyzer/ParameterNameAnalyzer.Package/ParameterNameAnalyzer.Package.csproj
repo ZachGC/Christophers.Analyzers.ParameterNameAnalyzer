@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <PackageId>ParameterNameAnalyzer</PackageId>
-    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackageVersion>1.1.0.0</PackageVersion>
     <Authors>Zach</Authors>
     <PackageLicenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</PackageLicenseUrl>
     <PackageProjectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</PackageProjectUrl>

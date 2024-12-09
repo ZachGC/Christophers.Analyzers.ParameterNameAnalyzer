@@ -10,3 +10,4 @@ C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\Pa
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.csproj.CoreCompileInputs.cache
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.dll
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.pdb
+C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.sourcelink.json
