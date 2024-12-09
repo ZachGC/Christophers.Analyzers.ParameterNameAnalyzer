@@ -2569,7 +2569,7 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Christophers.Analyzers.ParameterNameAnalyzer/1.0.4": {
+      "Christophers.Analyzers.ParameterNameAnalyzer/1.0.8": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -2587,7 +2587,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Christophers.Analyzers.ParameterNameAnalyzer": "1.0.4",
+          "Christophers.Analyzers.ParameterNameAnalyzer": "1.0.8",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.3.1"
         },
         "compile": {
@@ -7941,7 +7941,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Christophers.Analyzers.ParameterNameAnalyzer/1.0.4": {
+    "Christophers.Analyzers.ParameterNameAnalyzer/1.0.8": {
       "type": "project",
       "path": "../ParameterNameAnalyzer/ParameterNameAnalyzer.csproj",
       "msbuildProject": "../ParameterNameAnalyzer/ParameterNameAnalyzer.csproj"
@@ -7954,7 +7954,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Christophers.Analyzers.ParameterNameAnalyzer >= 1.0.4",
+      "Christophers.Analyzers.ParameterNameAnalyzer >= 1.0.8",
       "MSTest.TestAdapter >= 3.6.1",
       "MSTest.TestFramework >= 3.6.1",
       "Microsoft.CodeAnalysis >= 4.11.0",
@@ -7973,24 +7973,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zacha\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\zachary.christophers\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.Test\\ParameterNameAnalyzer.Test.csproj",
+      "projectUniqueName": "C:\\Users\\zachary.christophers\\OneDrive\\Documents\\Repos\\Christophers.Analyzers.ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.Test\\ParameterNameAnalyzer.Test.csproj",
       "projectName": "ParameterNameAnalyzer.Test",
-      "projectPath": "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.Test\\ParameterNameAnalyzer.Test.csproj",
-      "packagesPath": "C:\\Users\\zacha\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.Test\\obj\\",
+      "projectPath": "C:\\Users\\zachary.christophers\\OneDrive\\Documents\\Repos\\Christophers.Analyzers.ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.Test\\ParameterNameAnalyzer.Test.csproj",
+      "packagesPath": "C:\\Users\\zachary.christophers\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zachary.christophers\\OneDrive\\Documents\\Repos\\Christophers.Analyzers.ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.Test\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\zacha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\zachary.christophers\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8005,11 +8000,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.CodeFixes\\ParameterNameAnalyzer.CodeFixes.csproj": {
-              "projectPath": "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.CodeFixes\\ParameterNameAnalyzer.CodeFixes.csproj"
+            "C:\\Users\\zachary.christophers\\OneDrive\\Documents\\Repos\\Christophers.Analyzers.ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.CodeFixes\\ParameterNameAnalyzer.CodeFixes.csproj": {
+              "projectPath": "C:\\Users\\zachary.christophers\\OneDrive\\Documents\\Repos\\Christophers.Analyzers.ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.CodeFixes\\ParameterNameAnalyzer.CodeFixes.csproj"
             },
-            "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj": {
-              "projectPath": "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj"
+            "C:\\Users\\zachary.christophers\\OneDrive\\Documents\\Repos\\Christophers.Analyzers.ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj": {
+              "projectPath": "C:\\Users\\zachary.christophers\\OneDrive\\Documents\\Repos\\Christophers.Analyzers.ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj"
             }
           }
         }
@@ -8104,7 +8099,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

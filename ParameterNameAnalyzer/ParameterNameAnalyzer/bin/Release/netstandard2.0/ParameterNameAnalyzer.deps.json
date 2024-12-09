@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "ParameterNameAnalyzer/1.0.4": {
+      "ParameterNameAnalyzer/1.0.8": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "2.9.8",
           "Microsoft.CodeAnalysis.CSharp": "3.3.1",
@@ -215,7 +215,7 @@
     }
   },
   "libraries": {
-    "ParameterNameAnalyzer/1.0.4": {
+    "ParameterNameAnalyzer/1.0.8": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

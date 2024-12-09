@@ -12,12 +12,12 @@
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright</copyright>
     <tags>ParameterNameAnalyzer, analyzers</tags>
-    <repository type="git" url="http://REPOSITORY_URL_HERE_OR_DELETE_THIS_LINE" />
+    <repository type="git" url="http://REPOSITORY_URL_HERE_OR_DELETE_THIS_LINE" commit="9d61fd3423414697f1f5e8fec76cd9860727a98d" />
   </metadata>
   <files>
-    <file src="C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\bin\Release\netstandard2.0\ParameterNameAnalyzer.dll" target="analyzers\dotnet\cs\ParameterNameAnalyzer.dll" />
-    <file src="C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\bin\Release\netstandard2.0\ParameterNameAnalyzer.CodeFixes.dll" target="analyzers\dotnet\cs\ParameterNameAnalyzer.CodeFixes.dll" />
-    <file src="C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\tools\install.ps1" target="tools\install.ps1" />
-    <file src="C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\tools\uninstall.ps1" target="tools\uninstall.ps1" />
+    <file src="C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\bin\Release\netstandard2.0\ParameterNameAnalyzer.dll" target="analyzers\dotnet\cs\ParameterNameAnalyzer.dll" />
+    <file src="C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\bin\Release\netstandard2.0\ParameterNameAnalyzer.CodeFixes.dll" target="analyzers\dotnet\cs\ParameterNameAnalyzer.CodeFixes.dll" />
+    <file src="C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\tools\install.ps1" target="tools\install.ps1" />
+    <file src="C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\tools\uninstall.ps1" target="tools\uninstall.ps1" />
   </files>
 </package>

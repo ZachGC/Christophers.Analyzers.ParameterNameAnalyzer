@@ -9,10 +9,10 @@
     ".NETStandard,Version=v2.0/": {
       "ParameterNameAnalyzer.Package/1.0.0": {
         "dependencies": {
-          "Christophers.Analyzers.ParameterNameAnalyzer": "1.0.3",
+          "Christophers.Analyzers.ParameterNameAnalyzer": "1.0.7",
           "NETStandard.Library": "2.0.3",
           "ParameterNameAnalyzer.CodeFixes": "1.0.0",
-          "ParameterNameAnalyzer": "1.0.4.0"
+          "ParameterNameAnalyzer": "1.0.7.0"
         },
         "runtime": {
           "ParameterNameAnalyzer.Package.dll": {}
@@ -649,35 +649,29 @@
           }
         }
       },
-      "Christophers.Analyzers.ParameterNameAnalyzer/1.0.3": {
+      "Christophers.Analyzers.ParameterNameAnalyzer/1.0.7": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "2.9.8",
           "Microsoft.CodeAnalysis.CSharp": "3.3.1"
         },
         "runtime": {
-          "ParameterNameAnalyzer.dll": {
-            "assemblyVersion": "1.0.3",
-            "fileVersion": "1.0.4.0"
-          }
+          "ParameterNameAnalyzer.dll": {}
         }
       },
       "ParameterNameAnalyzer.CodeFixes/1.0.0": {
         "dependencies": {
-          "Christophers.Analyzers.ParameterNameAnalyzer": "1.0.3",
+          "Christophers.Analyzers.ParameterNameAnalyzer": "1.0.7",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.3.1"
         },
         "runtime": {
-          "ParameterNameAnalyzer.CodeFixes.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "ParameterNameAnalyzer.CodeFixes.dll": {}
         }
       },
-      "ParameterNameAnalyzer/1.0.4.0": {
+      "ParameterNameAnalyzer/1.0.7.0": {
         "runtime": {
           "ParameterNameAnalyzer.dll": {
-            "assemblyVersion": "1.0.4.0",
-            "fileVersion": "1.0.4.0"
+            "assemblyVersion": "1.0.7.0",
+            "fileVersion": "1.0.7.0"
           }
         }
       }
@@ -990,7 +984,7 @@
       "path": "system.threading.tasks.extensions/4.5.3",
       "hashPath": "system.threading.tasks.extensions.4.5.3.nupkg.sha512"
     },
-    "Christophers.Analyzers.ParameterNameAnalyzer/1.0.3": {
+    "Christophers.Analyzers.ParameterNameAnalyzer/1.0.7": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1000,7 +994,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ParameterNameAnalyzer/1.0.4.0": {
+    "ParameterNameAnalyzer/1.0.7.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

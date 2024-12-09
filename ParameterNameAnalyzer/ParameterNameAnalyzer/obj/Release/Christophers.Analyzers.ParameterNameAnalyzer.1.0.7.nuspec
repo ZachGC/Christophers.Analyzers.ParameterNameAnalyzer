@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Christophers.Analyzers.ParameterNameAnalyzer</id>
+    <version>1.0.7</version>
+    <authors>Zachary Christophers</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
+    <description>This is a Roslyn analyzer to enforce the use of parameter names in method calls.</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <tags>analyzer roslyn csharp</tags>
+    <repository type="git" commit="9d61fd3423414697f1f5e8fec76cd9860727a98d" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.CodeAnalysis.Analyzers" version="2.9.8" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.CSharp" version="3.3.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\bin\Release\netstandard2.0\ParameterNameAnalyzer.dll" target="analyzers\dotnet\cs\ParameterNameAnalyzer.dll" />
+    <file src="C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\README.md" target="\README.md" />
+  </files>
+</package>

@@ -10,3 +10,16 @@ C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\Pa
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.csproj.CoreCompileInputs.cache
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.dll
 C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.pdb
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\bin\Release\netstandard2.0\ParameterNameAnalyzer.deps.json
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\bin\Release\netstandard2.0\ParameterNameAnalyzer.dll
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\bin\Release\netstandard2.0\ParameterNameAnalyzer.pdb
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.csproj.AssemblyReference.cache
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.Resources.resources
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.csproj.GenerateResource.cache
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.AssemblyInfoInputs.cache
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.AssemblyInfo.cs
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.csproj.CoreCompileInputs.cache
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.sourcelink.json
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.dll
+C:\Users\zachary.christophers\OneDrive\Documents\Repos\Christophers.Analyzers.ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\obj\Release\netstandard2.0\ParameterNameAnalyzer.pdb

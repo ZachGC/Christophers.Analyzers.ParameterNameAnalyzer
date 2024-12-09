@@ -24,12 +24,15 @@ namespace ParameterNameAnalyzer
         {
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
+
             context.RegisterSyntaxNodeAction(AnalyzeMethodInvocation, SyntaxKind.InvocationExpression);
             context.RegisterSyntaxNodeAction(AnalyzeConstructorInvocation, SyntaxKind.ObjectCreationExpression);
         }
 
         private static void AnalyzeMethodInvocation(SyntaxNodeAnalysisContext context)
         {
+            if (context.Node.SyntaxTree.FilePath.Contains("Migrations")) return;
+
             var invocationExpression = (InvocationExpressionSyntax)context.Node;
 
             // Get the method being invoked
@@ -51,6 +54,8 @@ namespace ParameterNameAnalyzer
 
         private static void AnalyzeConstructorInvocation(SyntaxNodeAnalysisContext context)
         {
+            if (context.Node.SyntaxTree.FilePath.Contains("Migrations")) return;
+
             var objectCreationExpression = (ObjectCreationExpressionSyntax)context.Node;
 
             // Same logic you use for methods, but applied to constructor arguments

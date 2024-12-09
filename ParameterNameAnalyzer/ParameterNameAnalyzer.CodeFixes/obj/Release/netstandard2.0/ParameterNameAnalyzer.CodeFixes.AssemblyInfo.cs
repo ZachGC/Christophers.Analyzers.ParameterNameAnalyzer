@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParameterNameAnalyzer.CodeFixes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d61fd3423414697f1f5e8fec76cd9860727a98d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParameterNameAnalyzer.CodeFixes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParameterNameAnalyzer.CodeFixes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
