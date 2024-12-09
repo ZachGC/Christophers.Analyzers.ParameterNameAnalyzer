@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "ParameterNameAnalyzer/1.1.344.1009": {
+      "ParameterNameAnalyzer/1.1.344.1029": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "2.9.8",
           "Microsoft.CodeAnalysis.CSharp": "3.3.1"
@@ -141,7 +141,7 @@
     }
   },
   "libraries": {
-    "ParameterNameAnalyzer/1.1.344.1009": {
+    "ParameterNameAnalyzer/1.1.344.1029": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -557,7 +557,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.1.344.1009",
+    "version": "1.1.344.1026",
     "restore": {
       "projectUniqueName": "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj",
       "projectName": "Christophers.Analyzers.ParameterNameAnalyzer",

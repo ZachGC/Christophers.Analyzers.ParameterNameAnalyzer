@@ -81,7 +81,7 @@
       }
     },
     "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj": {
-      "version": "1.1.344.1009",
+      "version": "1.1.344.1026",
       "restore": {
         "projectUniqueName": "C:\\Projects\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer\\ParameterNameAnalyzer.csproj",
         "projectName": "Christophers.Analyzers.ParameterNameAnalyzer",

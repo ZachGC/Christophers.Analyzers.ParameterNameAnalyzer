@@ -12,7 +12,7 @@
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright</copyright>
     <tags>ParameterNameAnalyzer, analyzers</tags>
-    <repository type="git" url="http://REPOSITORY_URL_HERE_OR_DELETE_THIS_LINE" commit="9d61fd3423414697f1f5e8fec76cd9860727a98d" />
+    <repository type="git" url="http://REPOSITORY_URL_HERE_OR_DELETE_THIS_LINE" commit="6040fefc986a31eb50088ff7df63c08d77654fb8" />
   </metadata>
   <files>
     <file src="C:\Projects\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer\ParameterNameAnalyzer.Package\bin\Release\net8.0\ParameterNameAnalyzer.dll" target="analyzers\dotnet\cs\ParameterNameAnalyzer.dll" />

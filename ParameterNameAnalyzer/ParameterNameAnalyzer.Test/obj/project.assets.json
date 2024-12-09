@@ -2569,7 +2569,7 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Christophers.Analyzers.ParameterNameAnalyzer/1.1.344.1009": {
+      "Christophers.Analyzers.ParameterNameAnalyzer/1.1.344.1026": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
@@ -2583,7 +2583,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Christophers.Analyzers.ParameterNameAnalyzer": "1.1.344.1009",
+          "Christophers.Analyzers.ParameterNameAnalyzer": "1.1.344.1026",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "3.3.1"
         },
         "compile": {
@@ -7937,7 +7937,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Christophers.Analyzers.ParameterNameAnalyzer/1.1.344.1009": {
+    "Christophers.Analyzers.ParameterNameAnalyzer/1.1.344.1026": {
       "type": "project",
       "path": "../ParameterNameAnalyzer/ParameterNameAnalyzer.csproj",
       "msbuildProject": "../ParameterNameAnalyzer/ParameterNameAnalyzer.csproj"
@@ -7950,7 +7950,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Christophers.Analyzers.ParameterNameAnalyzer >= 1.1.344.1009",
+      "Christophers.Analyzers.ParameterNameAnalyzer >= 1.1.344.1026",
       "MSTest.TestAdapter >= 3.6.1",
       "MSTest.TestFramework >= 3.6.1",
       "Microsoft.CodeAnalysis >= 4.11.0",
