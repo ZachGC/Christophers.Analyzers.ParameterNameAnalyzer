@@ -1,44 +1,40 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
-    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <PackageId>Christophers.Analyzers.ParameterNameAnalyzer</PackageId>
+    <Version>1.2.$([System.DateTime]::Now.Day).$([System.DateTime]::Now.ToString("HHmm"))</Version>
+    <Authors>Zachary Christophers</Authors>
+    <Company>Ecko Workwear</Company>
+    <Description>This is a Roslyn analyzer to enforce the use of parameter names in method calls.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>analyzer roslyn csharp</PackageTags>
+    <Title>Parameter Name Analyzer</Title>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/ZachGC/Christophers.Analyzers.ParameterNameAnalyzer</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <PackageId>ParameterNameAnalyzer</PackageId>
-    <PackageVersion>1.1.0.0</PackageVersion>
-    <Authors>Zach</Authors>
-    <PackageLicenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</PackageLicenseUrl>
-    <PackageProjectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</PackageProjectUrl>
-    <PackageIconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</PackageIconUrl>
-    <RepositoryUrl>http://REPOSITORY_URL_HERE_OR_DELETE_THIS_LINE</RepositoryUrl>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Description>ParameterNameAnalyzer</Description>
-    <PackageReleaseNotes>Summary of changes made in this release of the package.</PackageReleaseNotes>
-    <Copyright>Copyright</Copyright>
-    <PackageTags>ParameterNameAnalyzer, analyzers</PackageTags>
-    <DevelopmentDependency>true</DevelopmentDependency>
-    <NoPackageAnalysis>true</NoPackageAnalysis>
-
+    <IsAnalyzer>true</IsAnalyzer>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <LangVersion>latest</LangVersion>
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ParameterNameAnalyzer.CodeFixes\ParameterNameAnalyzer.CodeFixes.csproj" />
-    <ProjectReference Include="..\ParameterNameAnalyzer\ParameterNameAnalyzer.csproj" />
+    <ProjectReference Include="..\ParameterNameAnalyzer.CodeFixes\ParameterNameAnalyzer.CodeFixes.csproj" PrivateAssets="All" IncludeAssets="None" />
+    <ProjectReference Include="..\ParameterNameAnalyzer\ParameterNameAnalyzer.csproj" PrivateAssets="All" IncludeAssets="None" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="tools\*.ps1" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="" />
+    <None Include="README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 
-  <Target Name="_AddAnalyzersToOutput">
+  <Target Name="_AddAnalyzersToOutput" AfterTargets="Build">
     <ItemGroup>
-      <TfmSpecificPackageFile Include="$(OutputPath)\ParameterNameAnalyzer.dll" PackagePath="analyzers/dotnet/cs" />
-      <TfmSpecificPackageFile Include="$(OutputPath)\ParameterNameAnalyzer.CodeFixes.dll" PackagePath="analyzers/dotnet/cs" />
+      <TfmSpecificPackageFile Include="$(MSBuildThisFileDirectory)..\ParameterNameAnalyzer\bin\$(Configuration)\netstandard2.0\ParameterNameAnalyzer.dll" PackagePath="analyzers/dotnet/cs" />
+      <TfmSpecificPackageFile Include="$(MSBuildThisFileDirectory)..\ParameterNameAnalyzer.CodeFixes\bin\$(Configuration)\netstandard2.0\ParameterNameAnalyzer.CodeFixes.dll" PackagePath="analyzers/dotnet/cs" />
     </ItemGroup>
   </Target>
 
