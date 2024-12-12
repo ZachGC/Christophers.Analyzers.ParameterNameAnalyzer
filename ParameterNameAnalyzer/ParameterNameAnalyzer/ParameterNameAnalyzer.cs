@@ -17,13 +17,7 @@ namespace ParameterNameAnalyzer
         private const string Category = "Naming";
 
         private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(
-            id: DiagnosticId,
-            title: Title,
-            messageFormat: MessageFormat,
-            category: Category,
-            defaultSeverity: DiagnosticSeverity.Warning,
-            isEnabledByDefault: true,
-            description: Description);
+            DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, isEnabledByDefault: true, description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
 
@@ -31,83 +25,84 @@ namespace ParameterNameAnalyzer
         {
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
-
             context.RegisterSyntaxNodeAction(AnalyzeMethodInvocation, SyntaxKind.InvocationExpression);
             context.RegisterSyntaxNodeAction(AnalyzeConstructorInvocation, SyntaxKind.ObjectCreationExpression);
         }
 
         private static void AnalyzeMethodInvocation(SyntaxNodeAnalysisContext context)
         {
-            if (context.Node is not InvocationExpressionSyntax invocationExpression)
+            if (context.Node is not InvocationExpressionSyntax invocation)
                 return;
 
-            // Exclude files in the "Migrations" folder
             var filePath = context.Node.SyntaxTree.FilePath;
             if (filePath != null && filePath.Contains(Path.DirectorySeparatorChar + "Migrations" + Path.DirectorySeparatorChar))
                 return;
 
-            if (invocationExpression.ArgumentList is null)
+            if (invocation.ArgumentList is null)
                 return;
 
-            var symbolInfo = context.SemanticModel.GetSymbolInfo(invocationExpression);
+            var symbolInfo = context.SemanticModel.GetSymbolInfo(invocation);
             if (symbolInfo.Symbol is not IMethodSymbol methodSymbol)
                 return;
 
-            // If EF expression trees or similar scenarios should be excluded, add logic here:
-            if (MethodExpectsExpression(methodSymbol))
-                return;
-
-            foreach (var argument in invocationExpression.ArgumentList.Arguments)
-            {
-                if (argument.NameColon is null)
-                {
-                    var diagnostic = Diagnostic.Create(Rule, argument.GetLocation(), argument.ToString());
-                    context.ReportDiagnostic(diagnostic);
-                }
-            }
+            ReportDiagnosticsForMissingNames(context, invocation.ArgumentList, methodSymbol);
         }
 
         private static void AnalyzeConstructorInvocation(SyntaxNodeAnalysisContext context)
         {
-            if (context.Node is not ObjectCreationExpressionSyntax objectCreationExpression)
+            if (context.Node is not ObjectCreationExpressionSyntax objectCreation)
                 return;
 
-            // Exclude files in the "Migrations" folder
             var filePath = context.Node.SyntaxTree.FilePath;
             if (filePath != null && filePath.Contains(Path.DirectorySeparatorChar + "Migrations" + Path.DirectorySeparatorChar))
                 return;
 
-            if (objectCreationExpression.ArgumentList is null)
+            if (objectCreation.ArgumentList is null)
                 return;
 
-            var symbolInfo = context.SemanticModel.GetSymbolInfo(objectCreationExpression);
+            var symbolInfo = context.SemanticModel.GetSymbolInfo(objectCreation);
             if (symbolInfo.Symbol is not IMethodSymbol methodSymbol)
                 return;
 
-            if (MethodExpectsExpression(methodSymbol))
-                return;
-
-            foreach (var argument in objectCreationExpression.ArgumentList.Arguments)
-            {
-                if (argument.NameColon is null)
-                {
-                    var diagnostic = Diagnostic.Create(Rule, argument.GetLocation(), argument.ToString());
-                    context.ReportDiagnostic(diagnostic);
-                }
-            }
+            ReportDiagnosticsForMissingNames(context, objectCreation.ArgumentList, methodSymbol);
         }
 
-        private static bool MethodExpectsExpression(IMethodSymbol methodSymbol)
+        private static void ReportDiagnosticsForMissingNames(SyntaxNodeAnalysisContext context, ArgumentListSyntax argumentList, IMethodSymbol methodSymbol)
         {
-            foreach (var param in methodSymbol.Parameters)
+            var arguments = argumentList.Arguments;
+            int paramCount = methodSymbol.Parameters.Length;
+
+            // Handle normal parameters first
+            for (int i = 0; i < arguments.Count && i < paramCount; i++)
             {
-                var typeName = param.Type.ToDisplayString();
-                if (typeName.StartsWith("System.Linq.Expressions.Expression"))
+                var argument = arguments[i];
+                var parameter = methodSymbol.Parameters[i];
+
+                // If this parameter is params, handle differently after this loop
+                if (!parameter.IsParams && argument.NameColon is null)
                 {
-                    return true;
+                    var diag = Diagnostic.Create(Rule, argument.GetLocation(), argument.ToString());
+                    context.ReportDiagnostic(diag);
                 }
             }
-            return false;
+
+            // Handle params parameter (if any)
+            if (paramCount > 0 && methodSymbol.Parameters[paramCount - 1].IsParams)
+            {
+                var paramsIndex = paramCount - 1;
+                var paramsParameter = methodSymbol.Parameters[paramsIndex];
+
+                // All arguments from paramsIndex onward belong to the params parameter
+                for (int i = paramsIndex; i < arguments.Count; i++)
+                {
+                    var argument = arguments[i];
+                    if (argument.NameColon == null)
+                    {
+                        var diag = Diagnostic.Create(Rule, argument.GetLocation(), argument.ToString());
+                        context.ReportDiagnostic(diag);
+                    }
+                }
+            }
         }
     }
 }

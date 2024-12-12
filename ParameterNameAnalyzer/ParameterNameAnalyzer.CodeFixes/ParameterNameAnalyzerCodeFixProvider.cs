@@ -24,12 +24,10 @@ namespace ParameterNameAnalyzer
         public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
-
             var diagnostic = context.Diagnostics.First();
-            var diagnosticSpan = diagnostic.Location.SourceSpan;
+            var span = diagnostic.Location.SourceSpan;
 
-            // Find the argument identified by the diagnostic.
-            var argumentNode = root.FindNode(diagnosticSpan);
+            var argumentNode = root.FindNode(span);
             var argument = argumentNode.AncestorsAndSelf().OfType<ArgumentSyntax>().FirstOrDefault();
             if (argument == null)
                 return;
@@ -47,10 +45,11 @@ namespace ParameterNameAnalyzer
             var root = await document.GetSyntaxRootAsync(cancellationToken).ConfigureAwait(false);
             var semanticModel = await document.GetSemanticModelAsync(cancellationToken).ConfigureAwait(false);
 
-            // Identify the call node
-            var callNode = (SyntaxNode)argument.FirstAncestorOrSelf<InvocationExpressionSyntax>()
-                         ?? argument.FirstAncestorOrSelf<ObjectCreationExpressionSyntax>();
+            // Try to find the call (invocation or constructor)
+            var invocation = argument.FirstAncestorOrSelf<InvocationExpressionSyntax>();
+            var objectCreation = argument.FirstAncestorOrSelf<ObjectCreationExpressionSyntax>();
 
+            var callNode = (SyntaxNode)invocation ?? objectCreation;
             if (callNode == null)
                 return document;
 
@@ -64,7 +63,6 @@ namespace ParameterNameAnalyzer
             if (argumentList == null)
                 return document;
 
-            // Get the method symbol
             IMethodSymbol methodSymbol = null;
             if (callNode is InvocationExpressionSyntax invExp)
             {
@@ -81,25 +79,25 @@ namespace ParameterNameAnalyzer
                 return document;
 
             var arguments = argumentList.Arguments;
-            var argumentIndex = arguments.IndexOf(argument);
-            if (argumentIndex < 0 || argumentIndex >= methodSymbol.Parameters.Length)
+            var argIndex = arguments.IndexOf(argument);
+            if (argIndex < 0 || argIndex >= methodSymbol.Parameters.Length)
                 return document;
 
-            var parameter = methodSymbol.Parameters[argumentIndex];
+            var parameter = methodSymbol.Parameters[argIndex];
             if (argument.NameColon != null)
             {
                 // Already named
                 return document;
             }
 
-            // Handle params parameter:
             if (parameter.IsParams)
             {
-                var paramsArguments = arguments.Skip(argumentIndex).ToList();
+                // Handle params
+                var paramsArgs = arguments.Skip(argIndex).ToList();
                 ExpressionSyntax newExpression;
-                if (paramsArguments.Count == 1)
+                if (paramsArgs.Count == 1)
                 {
-                    newExpression = paramsArguments[0].Expression;
+                    newExpression = paramsArgs[0].Expression;
                 }
                 else
                 {
@@ -107,28 +105,25 @@ namespace ParameterNameAnalyzer
                     var elementTypeSyntax = SyntaxFactory.ParseTypeName(elementType.ToDisplayString());
                     var arrayInitializer = SyntaxFactory.InitializerExpression(
                         SyntaxKind.ArrayInitializerExpression,
-                        SyntaxFactory.SeparatedList(paramsArguments.Select(a => a.Expression)));
+                        SyntaxFactory.SeparatedList(paramsArgs.Select(a => a.Expression)));
 
-                    var arrayCreation = SyntaxFactory.ArrayCreationExpression(
+                    newExpression = SyntaxFactory.ArrayCreationExpression(
                         SyntaxFactory.ArrayType(elementTypeSyntax)
                             .WithRankSpecifiers(SyntaxFactory.SingletonList(
                                 SyntaxFactory.ArrayRankSpecifier(
                                     SyntaxFactory.SingletonSeparatedList<ExpressionSyntax>(
                                         SyntaxFactory.OmittedArraySizeExpression())))),
                         arrayInitializer);
-
-                    newExpression = arrayCreation;
                 }
 
                 var namedArgument = SyntaxFactory.Argument(
                     SyntaxFactory.NameColon(SyntaxFactory.IdentifierName(parameter.Name)),
                     default,
                     newExpression)
-                    .WithTriviaFrom(paramsArguments.First());
+                    .WithTriviaFrom(paramsArgs.First());
 
-                var newArguments = arguments.Take(argumentIndex).Append(namedArgument);
-                var newArgList = argumentList.WithArguments(SyntaxFactory.SeparatedList(newArguments));
-
+                var newArgs = arguments.Take(argIndex).Append(namedArgument);
+                var newArgList = argumentList.WithArguments(SyntaxFactory.SeparatedList(newArgs));
                 return document.WithSyntaxRoot(root.ReplaceNode(argumentList, newArgList));
             }
             else
@@ -136,7 +131,6 @@ namespace ParameterNameAnalyzer
                 // Normal parameter
                 var newArgument = argument.WithNameColon(SyntaxFactory.NameColon(SyntaxFactory.IdentifierName(parameter.Name)))
                                           .WithTriviaFrom(argument);
-
                 var newRoot = root.ReplaceNode(argument, newArgument);
                 return document.WithSyntaxRoot(newRoot);
             }
